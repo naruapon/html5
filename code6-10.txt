@@ -1,0 +1,3 @@
+var mynumber = 2;
+var yournumber = mynumber;
+alert(yournumber);

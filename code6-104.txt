@@ -1,0 +1,3 @@
+var list = [12, 5, 80, 34];
+var newList = list.slice(1, 3);
+alert(newList);  // 5,80

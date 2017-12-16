@@ -1,0 +1,5 @@
+var today = new Date();
+var year = today.getFullYear();
+var month = today.getMonth() + 1;
+var day = today.getDate();
+alert(year + "-" + month + "-" + day);  // "2017-1-5"

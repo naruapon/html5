@@ -1,0 +1,4 @@
+#title {
+  font: bold 36px Verdana, sans-serif;
+  color: rgb(204, 204, 204);
+}

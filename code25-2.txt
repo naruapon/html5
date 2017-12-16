@@ -1,0 +1,30 @@
+var context;
+function initiate() {
+  var mybuffer;
+  var button = document.getElementById("button");
+  button.addEventListener("click", function() {
+    play(mybuffer);
+  });
+  context = new AudioContext();
+
+  var url = "gunshot.wav";
+  var request = new XMLHttpRequest();
+  request.responseType = "arraybuffer";
+  request.addEventListener("load", function() {
+    if (request.status == 200) {
+      context.decodeAudioData(request.response, function(buffer) {
+        mybuffer = buffer;
+        button.disabled = false;
+      });
+    }
+  });
+  request.open("GET", url, true);
+  request.send();
+}
+function play(mybuffer) {
+  var sourceNode = context.createBufferSource();
+  sourceNode.buffer = mybuffer;
+  sourceNode.connect(context.destination);
+  sourceNode.start(0);
+}
+window.addEventListener("load", initiate);

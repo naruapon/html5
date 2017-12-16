@@ -1,0 +1,3 @@
+var list = [12, 5, 80, 34];
+var newList = list.concat([100, 200, 300]);
+alert(newList);  // 12,5,80,34,100,200,300

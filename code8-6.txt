@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audio Player</title>
+</head>
+<body>
+  <section>
+    <audio src="beach.mp3" controls>
+    </audio>
+  </section>
+</body>
+</html>

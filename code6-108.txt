@@ -1,0 +1,3 @@
+var list = [12, 5, 80, 34];
+var message = list.join("-");
+alert(message);  // "12-5-80-34"

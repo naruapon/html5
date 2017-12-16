@@ -1,0 +1,23 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var myfiles = document.getElementById("myfiles");
+  myfiles.addEventListener("change", process);
+}
+function process(event) {
+  databox.innerHTML = "";
+  var files = event.target.files;
+  var myfile = files[0];
+  var reader = new FileReader();
+  reader.addEventListener("load", function(event) {
+    show(event, myfile)
+  });
+  reader.readAsBinaryString(myfile);
+}
+function show(event, myfile){
+  var url = URL.createObjectURL(myfile);
+  var image = document.createElement("img");
+  image.src = url;
+  databox.appendChild(image);
+}
+window.addEventListener("load", initiate);

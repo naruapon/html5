@@ -1,0 +1,6 @@
+#title {
+  font: bold 36px Verdana, sans-serif;
+}
+#description {
+  width: 200px;
+}

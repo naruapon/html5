@@ -1,0 +1,9 @@
+header {
+  margin: 30px;
+  padding: 15px;
+  text-align: center;
+  border: 5px dashed #CCCCCC;
+}
+#title {
+  font: bold 36px Verdana, sans-serif;
+}

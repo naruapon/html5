@@ -1,0 +1,2 @@
+var mytext = "The number is " + 3;
+alert(mytext);

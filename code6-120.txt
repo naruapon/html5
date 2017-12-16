@@ -1,0 +1,5 @@
+var list = [12, 5, 80, 34];
+var newList = list.map(function(value) {
+  return value * 2;
+});
+alert(newList);  // 24,10,160,68

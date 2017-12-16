@@ -1,0 +1,26 @@
+#parentbox {
+  position: relative;
+  width: 365px;
+  height: 274px;
+  overflow: hidden;
+}
+#container {
+  position: absolute;
+  top: 0px;
+  width: 365px;
+  height: 324px;
+}
+#topcontainer {
+  width: 365px;
+  height: 274px;
+}
+#bottomcontainer {
+  width: 365px;
+  height: 35px;
+  padding-top: 15px;
+  background-color: rgba(200, 200, 200, 0.8);
+  text-align: center;
+}
+#container:hover {
+  top: -50px;
+}

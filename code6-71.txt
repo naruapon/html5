@@ -1,0 +1,15 @@
+var myobject = {
+  name: "John",
+  age: 30,
+  showinfo: function() {
+    var message = "Name: " + myobject.name + "\r\n";
+    message += "Age: " + myobject.age;
+    alert(message);
+  },
+  changename: function(newname) {
+    myobject.name = newname;
+  }
+};
+myobject.showinfo();  // "Name: John Age: 30"
+myobject.changename("Jonathan");
+myobject.showinfo();  // "Name: Jonathan Age: 30"

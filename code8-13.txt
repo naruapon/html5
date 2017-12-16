@@ -1,0 +1,13 @@
+function move(event) {
+  if (!mmedia.paused && !mmedia.ended) {
+    var mouseX = event.offsetX - 2;
+    if (mouseX < 0) {
+      mouseX = 0;
+    } else if (mouseX > maxim) {
+      mouseX = maxim;
+    }
+    var newtime = mouseX * mmedia.duration / maxim;
+    mmedia.currentTime = newtime;
+    progress.style.width = mouseX + "px";
+  }
+}

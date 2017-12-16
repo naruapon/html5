@@ -1,0 +1,10 @@
+function initiate() {
+  databox = document.getElementById("databox");
+  url = document.getElementById("url");
+  url.addEventListener("click", changepage);
+}
+function changepage() {
+  databox.innerHTML = "The url is page2";
+  history.pushState(null, null, "page2.html");
+}
+window.addEventListener("load", initiate);

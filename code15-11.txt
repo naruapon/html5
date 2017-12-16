@@ -1,0 +1,16 @@
+function showlist(event) {
+  var cursor = event.target.result;
+  if (cursor) {
+    databox.innerHTML += "<div>" + cursor.value.id + " - " + cursor.value.name + " - ";
+    databox.innerHTML += cursor.value.date + ' <input type="button" onclick="removeobject(\'' + cursor.value.id + '\')" value="remove"></div>';
+    cursor.continue();
+  }
+}
+function removeobject(keyword) {
+  if (confirm("Are you sure?")) {
+    var mytransaction = db.transaction(["movies"], "readwrite");
+    var mystore = mytransaction.objectStore("movies");
+    mytransaction.addEventListener("complete", show);
+    var request = mystore.delete(keyword);
+  }
+}

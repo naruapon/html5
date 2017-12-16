@@ -1,0 +1,22 @@
+@media (max-width: 480px) {
+  #logoheader > div {
+    text-align: center;
+  }
+  #logoheader h1 {
+    font: bold 46px Arial, sans-serif;
+  }
+  #mainmenu {
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+  }
+  #mainmenu li {
+    display: block;
+    margin-right: 0px;
+    text-align: center;
+  }
+  .footersection {
+    width: 94%;
+    text-align: center;
+  }
+}

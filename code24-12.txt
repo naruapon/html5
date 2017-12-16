@@ -1,0 +1,98 @@
+var user, socket, channel, channelopen;
+function initiate() {
+  var callbutton = document.getElementById("callbutton");
+  callbutton.addEventListener("click", makecall);
+  var sendbutton = document.getElementById("sendbutton");
+  sendbutton.addEventListener("click", senddata);
+
+  socket = new WebSocket("ws://YOUR_IP_ADDRESS:12345/ws/demo.php");
+  socket.addEventListener("message", received);
+
+  var promise = navigator.mediaDevices.getUserMedia({video: true});
+  promise.then(setwebcam);
+  promise.catch(showerror);
+}
+function showerror(event) {
+  console.error(event);
+}
+function setwebcam(stream) {
+  var servers = {"iceServers": [{"urls": "stun:stun.l.google.com:19302"}]};
+  user = new webkitRTCPeerConnection(servers);
+  user.addEventListener("addstream", setremotestream);
+  user.addEventListener("icecandidate", setice);
+  user.ondatachannel = function(event) {
+    channel = event.channel;
+    channel.onmessage = receivedata;
+    channelopen = true;
+  };
+  user.addStream(stream);
+  var video = document.getElementById("callermedia");
+  video.srcObject = stream;
+  video.play();
+}
+function received(event) {
+  var msg = JSON.parse(event.data);
+  switch (msg.type) {
+    case "offer":
+      user.setRemoteDescription(new RTCSessionDescription(msg), function() {
+          user.createAnswer(setdescription, showerror);
+        });
+      break;
+    case "answer":
+      user.setRemoteDescription(new RTCSessionDescription(msg));
+      break;
+    case "candidate":
+      var candidate = new RTCIceCandidate(msg.candidate);
+      user.addIceCandidate(candidate);
+  }
+}
+function sendmsg(message) {
+  var msg = JSON.stringify(message);
+  socket.send(msg);
+}
+function makecall() {
+  channel = user.createDataChannel("data");
+  channel.onopen = function() {
+    channelopen = true;
+  };
+  channel.onmessage = receivedata;
+  user.createOffer(setdescription, showerror);
+}
+function setdescription(sessionDescription) {
+  user.setLocalDescription(sessionDescription, function() {
+    sendmsg(sessionDescription);
+  });
+}
+function setremotestream(event) {
+  var video = document.getElementById("receivermedia");
+  video.srcObject = event.stream;
+  video.play();
+}
+function setice(event) {
+  if (event.candidate) {
+    var message = {
+      type: "candidate",
+      candidate: event.candidate,
+    };
+    sendmsg(message);
+  }
+}
+function senddata() {
+  var databox = document.getElementById("databox");
+  if (!channelopen) {
+    databox.innerHTML = "DataChannel is not ready, please try again";
+  } else {
+    var message = document.getElementById("myinput").value;
+    var chatroom = databox.innerHTML;
+    databox.innerHTML = "Local Says: " + message + "<br>";
+    databox.innerHTML += chatroom;
+    channel.send(message);
+  }
+}
+function receivedata(event) {
+  var databox = document.getElementById("databox");
+  var chatroom = databox.innerHTML;
+  databox.innerHTML = "Remote Says: " + event.data + "<br>";
+  databox.innerHTML += chatroom;
+}
+window.addEventListener("load", initiate);

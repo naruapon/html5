@@ -1,0 +1,15 @@
+<script>
+  function initiate() {
+    var info = document.getElementById("info");
+    var mytrack = document.getElementById("mytrack");
+    var obj = mytrack.track;
+    var mycues = obj.cues;
+
+    var list = "";
+    for (var f = 0; f < mycues.length; f++) {
+      list += mycues[f].text + "<br>";
+    }
+    info.innerHTML = list;
+  }
+  window.addEventListener("load", initiate);
+</script>

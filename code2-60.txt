@@ -1,0 +1,5 @@
+<form name="myform" method="get" action="process.php">
+  <p><label>Name: <input type="text" name="myname"></label></p>
+  <p><label>Age: <input type="text" name="myage"></label></p>
+  <p><button type="submit">Send Form</button></p>
+</form>

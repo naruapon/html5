@@ -1,0 +1,45 @@
+var context;
+var mybuffers = [];
+function initiate() {
+  var button = document.getElementById("button");
+  button.addEventListener("click", function() {
+    play();
+  });
+  context = new AudioContext();
+  loadbuffers("gunshot.wav", 0);
+  loadbuffers("garage.wav", 1);
+
+  var control = function() {
+    if (mybuffers.length >= 2) {
+      button.disabled = false;
+    } else {
+      setTimeout(control, 200);
+    }
+  };
+  control();
+}
+function loadbuffers(url, id) {
+  var request = new XMLHttpRequest();
+  request.responseType = "arraybuffer";
+  request.addEventListener("load", function(){
+    if (request.status == 200) {
+      context.decodeAudioData(request.response, function(buffer) {
+        mybuffers[id] = buffer;
+      });
+    }
+  });
+  request.open("GET", url, true);
+  request.send();
+}
+function play() {
+  var sourceNode = context.createBufferSource();
+  sourceNode.buffer = mybuffers[0];
+
+  var convolverNode = context.createConvolver();
+  convolverNode.buffer = mybuffers[1];
+
+  sourceNode.connect(convolverNode);
+  convolverNode.connect(context.destination);
+  sourceNode.start(0);
+}
+window.addEventListener("load", initiate);

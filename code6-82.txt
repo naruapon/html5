@@ -1,0 +1,18 @@
+var myobject = {
+  name: "John",
+  age: 30,
+  showname: function(){
+    alert(this.name);
+  },
+  changename: function(newname){
+    this.name = newname;
+  }
+};
+var employee1 = Object.create(myobject);
+var employee2 = Object.create(employee1);
+var employee3 = Object.create(employee2);
+employee2.showage = function(){
+  alert(this.age);
+};
+employee3.age = 24;
+employee3.showage();  // 24

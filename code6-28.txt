@@ -1,0 +1,2 @@
+var myarray = ["red", 32, "HTML5 is awesome!"];
+alert(myarray[1]);

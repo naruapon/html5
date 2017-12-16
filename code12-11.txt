@@ -1,0 +1,28 @@
+var mygame = {
+  renderer: "",
+  scene: "",
+  camera: "",
+  light: "",
+  car: {
+    mesh: "",
+    speed: 0,
+    speedUP: false,
+    left: false,
+    right: false,
+    wheelangle: 0
+  },
+  walls: [{x: 0, y: 100, z: -1000},
+          {x: -1000, y: 100, z: 0},
+          {x: 0, y: 100, z: 1000},
+          {x: 1000, y: 100, z:0}],
+  textures: {
+    car: "",
+    floor: "",
+    walls: ""
+  },
+  targets: {
+    mesh: "",
+    edges: [],
+  },
+  input: []
+};

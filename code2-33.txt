@@ -1,0 +1,7 @@
+<article>
+  <p>A people without the knowledge of their past history, origin and culture is like a tree without roots.<br>Marcus Garvey</p>
+  <figure>
+    <img src="myimage.jpg" width="150" alt="Trees in my backyard">
+    <figcaption>Trees in my backyard<figcaption>
+  </figure>
+</article>

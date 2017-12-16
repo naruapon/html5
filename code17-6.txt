@@ -1,0 +1,30 @@
+var drop;
+function initiate() {
+  var images = document.querySelectorAll("#picturesbox > img");
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener("dragstart", dragged);
+  }
+  drop = document.getElementById("dropbox");
+  drop.addEventListener("dragenter", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("drop", dropped);
+}
+function dragged(event) {
+  element = event.target;
+  event.dataTransfer.setData("Text", element.id);
+}
+function dropped(event) {
+  event.preventDefault();
+  var id = event.dataTransfer.getData("Text");
+  if (id != "image4") {
+    var src = document.getElementById(id).src;
+    drop.innerHTML = '<img src="' + src + '">';
+  } else {
+    drop.innerHTML = "Not admitted";
+  }
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,9 @@
+function sendit() {
+  var element = document.getElementById("nickname");
+  var valid = form.checkValidity();
+  if (valid) {
+    form.submit();
+  } else if (element.validity.patternMismatch || element.validity.valueMissing) {
+    alert('The nickname must have a minimum of 3 characters');
+  }
+}

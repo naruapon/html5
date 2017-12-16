@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5 document">
+  <meta name="keywords" content="HTML, CSS, Javascript">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <section id="parentbox">
+    <img src="myimage.jpg" width="365" height="274">
+    <div id="container">
+      <div id="topcontainer"></div>
+      <div id="bottomcontainer">
+        <span><strong>This is my backyard</strong></span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

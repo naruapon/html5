@@ -1,0 +1,26 @@
+mygame.initiate = function() {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  document.body.appendChild(canvas);
+
+  mygame.renderer = new THREE.WebGLRenderer({canvas: canvas, antialias:true});
+  mygame.scene = new THREE.Scene();
+  mygame.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
+  mygame.camera.position.set(0, 50, 150);
+
+  mygame.light = new THREE.PointLight(0x999999, 1);
+  mygame.light.position.set(0, 50, 150);
+  mygame.scene.add(mygame.light);
+
+  window.addEventListener("keydown", function(event) {
+    mygame.input.push({type: "keydown", key: event.key});
+  });
+  window.addEventListener("keyup", function(event) {
+    mygame.input.push({type: "keyup", key: event.key});
+  });
+  mygame.loading();
+  mygame.create();
+};

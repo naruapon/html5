@@ -1,0 +1,10 @@
+header {
+  margin: 30px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid;
+  box-shadow: rgb(150,150,150) 10px 10px 20px 10px;
+}
+#title {
+  font: bold 36px Verdana, sans-serif;
+}

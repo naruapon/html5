@@ -1,0 +1,5 @@
+var today = new Date(2017, 0, 5);
+var future = new Date(2017, 0, 20);
+var interval = future - today;
+var seconds = interval / 1000;
+alert(seconds + " seconds");  // "1296000 seconds"

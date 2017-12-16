@@ -1,0 +1,1 @@
+<p>My favorite movie is <span contenteditable>Casablanca</span></p>

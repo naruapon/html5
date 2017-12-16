@@ -1,0 +1,2 @@
+var myarray = ["red", undefined, 32];
+alert(myarray[1]);

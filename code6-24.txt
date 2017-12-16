@@ -1,0 +1,3 @@
+var mytext = "The good life is one inspired by love\r\n";
+mytext = mytext + "and guided by knowledge"
+alert(mytext);

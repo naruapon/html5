@@ -1,0 +1,10 @@
+function show(keyword) {
+  var mytransaction = db.transaction(["movies"]);
+  var mystore = mytransaction.objectStore("movies");
+  var request = mystore.get(keyword);
+  request.addEventListener("success", showlist);
+}
+function showlist(event) {
+  var result = event.target.result;
+  databox.innerHTML = "<div>" + result.id + " - " + result.name + " - " + result.date + "</div>";
+}

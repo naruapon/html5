@@ -1,0 +1,14 @@
+function setwebcam(stream) {
+  var video = document.getElementById("callermedia");
+  video.srcObject = stream;
+  video.play();
+
+  var servers = {"iceServers": [{"urls": "stun: stun.l.google.com:19302"}]};
+  user = new RTCPeerConnection(servers);
+  user.addStream(stream);
+  user.addEventListener("addstream", setremotestream);
+  user.addEventListener("icecandidate", setice);
+}
+function showerror() {
+  console.log("Error");
+}

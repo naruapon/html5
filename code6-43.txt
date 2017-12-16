@@ -1,0 +1,14 @@
+var myvariable = 8;
+switch(myvariable) {
+  case 5:
+    alert("The number is five");
+    break;
+  case 8:
+    alert("The number is eight");
+    break;
+  case 10:
+    alert("The number is ten");
+    break;
+  default:
+    alert("The number is " + myvariable);
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <style>
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <p>My text</p>
+    </section>
+  </main>
+</body>
+</html>

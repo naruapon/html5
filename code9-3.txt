@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stream API</title>
+  <script>
+    function initiate() {
+      var promise = navigator.mediaDevices.getUserMedia({video: true});
+      promise.then(success);
+      promise.catch(showerror);
+    }
+    function success(stream) {
+      var button = document.getElementById("button");
+      button.addEventListener("click", function() { stopstream(stream) });
+      var video = document.getElementById("video");
+      video.srcObject = stream;
+      video.play();
+    }
+    function showerror(event) {
+      console.log("Error: " + error.name);
+    }
+    function stopstream(stream) {
+      var videoTracks = stream.getVideoTracks();
+      var track = videoTracks[0];
+      track.stop();
+      alert("Stream Canceled");
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="video"></video>
+  </section>
+  <nav>
+    <button type="button" id="button">Turn Off</button>
+  </nav>
+</body>
+</html>

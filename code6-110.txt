@@ -1,0 +1,13 @@
+var list = [12, 5, 80, 34, 5];
+var search = 5;
+var last = 0;
+var counter = 0;
+
+while (last >= 0) {
+  var last = list.indexOf(5, last);
+  if (last != -1) {
+    last++;
+    counter++;
+  }
+}
+alert("There is a total of " + counter + " values " + search);

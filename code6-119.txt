@@ -1,0 +1,5 @@
+var list = [12, 5, 80, 34];
+list.sort(function(value1, value2) {
+  return value1 > value2;
+});
+alert(list);  // 5,12,34,80

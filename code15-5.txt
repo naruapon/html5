@@ -1,0 +1,5 @@
+function createdb(event) {
+  var datababase = event.target.result;
+  var mystore = datababase.createObjectStore("movies", {keyPath: "id"});
+  mystore.createIndex("SearchYear", "date", {unique: false});
+}

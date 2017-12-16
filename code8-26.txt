@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Working with Tracks</title>
+  <script>
+    function initiate(){
+      var cue;
+      var cues = [
+        { start: 2.000, end: 7.000, text: "Welcome"},
+        { start: 10.000, end: 15.000, text: "This is an example"},
+        { start: 15.001, end: 20.000, text: "of how to add"},
+        { start: 20.001, end: 25.000, text: "a new track."},
+        { start: 27.000, end: 30.000, text: "Good bye!"},
+      ];
+      var video = document.getElementById("media");
+      var newtrack = video.addTextTrack("subtitles");
+      newtrack.mode = "showing";
+      for (var f = 0; f < cues.length; f++) {
+        cue = new VTTCue(cues[f].start, cues[f].end, cues[f].text);
+        newtrack.addCue(cue);
+      }
+      video.play();
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="media" width="720" height="400" controls>
+      <source src="trailer.mp4">
+      <source src="trailer.ogg">
+    </video>
+  </section>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<form name="myform" method="get" action="process.php">
+  <p>
+    <label for="bookslist">Books: </label>
+    <select name="book" id="bookslist">
+      <option value="1">IT</option>
+      <option value="2">Carrie</option>
+      <option value="3">The Shining</option>
+      <option value="4">Misery</option>
+    </select>
+  </p>
+  <p><input type="submit" value="Send"></p>
+</form>

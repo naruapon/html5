@@ -1,0 +1,8 @@
+var myvalue = "32";
+if (isNaN(myvalue)) {
+  alert(myvalue + " is not a number");
+} else {
+  var number = parseInt(myvalue);
+  number = number * 10;
+  alert("The number is: " + number);  // "The number is 320"
+}

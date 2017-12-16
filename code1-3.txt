@@ -1,0 +1,6 @@
+<script>
+  function changeColor() {
+    document.body.style.backgroundColor = "#0000FF";
+  }
+  document.addEventListener("click", changeColor);
+</script>

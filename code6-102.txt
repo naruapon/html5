@@ -1,0 +1,2 @@
+var list = [12, 5, 80, 34];
+alert(list.length);  // 4

@@ -1,0 +1,23 @@
+@media (max-width: 480px) {
+  #mainmenu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+  }
+  #mainmenu li {
+    display: block;
+    margin-right: 0px;
+    text-align: center;
+  }
+  #menuicon {
+    display: block;
+  }
+  .footersection {
+    width: 94%;
+    text-align: center;
+  }
+  #logoheader > div {
+    text-align: center;
+  }
+}

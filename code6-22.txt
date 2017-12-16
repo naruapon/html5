@@ -1,0 +1,2 @@
+var mytext = "20" + 3;
+alert(mytext);  // "203"

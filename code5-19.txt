@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5 document">
+  <meta name="keywords" content="HTML, CSS, Javascript">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <picture>
+      <source media="(max-width: 480px)" srcset="logosmall.jpg">
+      <img src="logo.jpg">
+    </picture>
+  </header>
+</body>
+</html>

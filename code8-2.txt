@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Video Player</title>
+</head>
+<body>
+  <section>
+    <video src="trailer.mp4" controls autoplay>
+    </video>
+  </section>
+</body>
+</html>

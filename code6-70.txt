@@ -1,0 +1,9 @@
+var myobject = {
+  name: "John",
+  age: 30,
+  bike: {
+    model: "Susuki",
+    year: 1981
+  }
+};
+alert(myobject.name + " owns a " + myobject.bike.model);

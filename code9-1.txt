@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stream API</title>
+  <script>
+    function initiate() {
+      var promise = navigator.mediaDevices.getUserMedia({video: true});
+      promise.then(success);
+      promise.catch(showerror);
+
+      function success(stream) {
+        var video = document.getElementById("media");
+        video.srcObject = stream;
+        video.play();
+      }
+      function showerror(error) {
+        console.log("Error: " + error.name);
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="media"></video>
+  </section>
+</body>
+</html>

@@ -1,0 +1,2 @@
+var value = new Number(5);
+alert(value);  // 5

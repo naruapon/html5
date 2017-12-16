@@ -1,0 +1,22 @@
+var source, drop;
+function initiate() {
+  source = document.getElementById("image");
+  source.addEventListener("dragstart", dragged);
+  drop = document.getElementById("dropbox");
+  drop.addEventListener("dragenter", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("drop", dropped);
+}
+function dragged(event) {
+  var code = '<img src="' + source.src + '">';
+  event.dataTransfer.setData("Text", code);
+}
+function dropped(event) {
+  event.preventDefault();
+  drop.innerHTML = event.dataTransfer.getData("Text");
+}
+window.addEventListener("load", initiate);

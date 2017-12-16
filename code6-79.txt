@@ -1,0 +1,12 @@
+function Myobject(initialname, initialage){
+  this.name = initialname;
+  this.age = initialage;
+  this.showname = function(){
+    alert(this.name);
+  };
+  this.changename = function(newname){
+    this.name = newname;
+  };
+}
+var employee = new Myobject("Robert", 55);
+employee.showname();  // "Robert"

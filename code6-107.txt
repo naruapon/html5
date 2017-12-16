@@ -1,0 +1,7 @@
+var list = [12, 5, 80, 34];
+var valid = list.every(function(value) {
+  return value <= 100;
+});
+if (valid) {
+  alert("The values are not greater than 100");
+}

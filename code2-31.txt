@@ -1,0 +1,4 @@
+<article>
+  <p>A people without the knowledge of their past history, origin and culture is like a tree without roots.<br>Marcus Garvey</p>
+  <img src="myimage.jpg">
+</article>

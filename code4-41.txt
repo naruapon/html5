@@ -1,0 +1,21 @@
+#parentbox {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#parentbox > div {
+  height: 145px;
+  margin: 5px;
+  background-color: #CCCCCC;
+}
+#box-1 {
+  flex: 1;
+}
+#box-2 {
+  flex: 1;
+}
+#box-3 {
+  flex: 1;
+}
+#box-4 {
+  flex: 1;
+}

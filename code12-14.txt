@@ -1,0 +1,34 @@
+mygame.create = function() {
+  var geometry, material, texture, mesh;
+  mesh = mygame.textures.car.scene;
+  mesh.scale.set(20, 20, 20);
+  mesh.rotation.set(-Math.PI / 2, 0, Math.PI);
+  mesh.position.y += 14;
+  mygame.scene.add(mesh);
+  mygame.car.mesh = mesh;
+
+  geometry = new THREE.PlaneGeometry(2000, 2000, 10, 10);
+  texture = new THREE.Texture(mygame.textures.floor, THREE.UVMapping, THREE.RepeatWrapping, THREE.RepeatWrapping);
+  texture.repeat.set(20, 20);
+
+  texture.needsUpdate = true;
+
+  material = new THREE.MeshPhongMaterial({map: texture});
+  mesh = new THREE.Mesh(geometry, material);
+  mesh.rotation.x = Math.PI * 1.5;
+  mygame.scene.add(mesh);
+
+  for (var f = 0; f < 4; f++) {
+    geometry = new THREE.PlaneGeometry(2000, 200, 10, 10);
+    texture = new THREE.Texture(mygame.textures.walls, THREE.UVMapping, THREE.RepeatWrapping, THREE.RepeatWrapping);
+    texture.repeat.set(10, 1);
+    texture.needsUpdate = true;
+
+    material = new THREE.MeshPhongMaterial({map: texture});
+    mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(mygame.walls[f].x, mygame.walls[f].y, mygame.walls[f].z);
+    mesh.rotation.y = Math.PI / 2 * f;
+    mygame.scene.add(mesh);
+  }
+  mygame.loop();
+};

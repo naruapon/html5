@@ -1,0 +1,7 @@
+var counter = 100;
+var items = 5;
+function myfunction(value1, value2) {
+  var total = value1 + value2;
+  alert(total);  // 105
+}
+myfunction(counter, items);

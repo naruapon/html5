@@ -1,0 +1,8 @@
+<form name="myform" method="get" action="process.php">
+  <datalist id="mydata">
+    <option value="123123123" label="Phone 1">
+    <option value="456456456" label="Phone 2">
+  </datalist>
+  <p><label>Phone: <input type="tel" name="myphone" list="mydata"></label></p>
+  <p><input type="submit" value="Send"></p>
+</form>

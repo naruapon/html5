@@ -1,0 +1,16 @@
+var myobject = {
+  name: "John",
+  age: 30,
+  showinfo: function() {
+    var message = "Name: " + myobject.name + "\r\n";
+    message += "Age: " + myobject.age;
+    alert(message);
+  },
+  changename: function(newname) {
+    var oldName = myobject.name;
+    myobject.name = newname;
+    return oldName;
+  }
+};
+var old = myobject.changename("Jonathan");
+alert("Old name was: " + old);  // "Old name was: John"

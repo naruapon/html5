@@ -1,0 +1,10 @@
+function initiate() {
+  var worker = new SharedWorker("worker.js");
+  worker.port.addEventListener("message", received);
+  worker.port.start();
+}
+function received(event) {
+  var databox = document.getElementById("databox");
+  databox.innerHTML = event.data;
+}
+window.addEventListener("load", initiate);

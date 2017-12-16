@@ -1,0 +1,10 @@
+header {
+  margin: 30px;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 20px / 10px;
+}
+#title {
+  font: bold 36px Verdana, sans-serif;
+}

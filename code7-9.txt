@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <style>
+    input:optional{
+      border: 2px solid #009999;
+    }
+    input:required{
+      border: 2px solid #000099;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <form name="myform" method="get" action="process.php">
+      <p><input type="text" name="myname"></p>
+      <p><input type="text" name="mylastname" required></p>
+      <p><input type="submit" value="Send"></p>
+    </form>
+  </section>
+</body>
+</html>

@@ -1,0 +1,20 @@
+mygame.draw = function() {
+  if (!mygame.targets.mesh) {
+    var geometry = new THREE.SphereGeometry(20, 10, 10);
+    var material = new THREE.MeshBasicMaterial({color: 0x00FF00, wireframe: true});
+    var mesh = new THREE.Mesh(geometry, material);
+    var posx = (Math.random() * 1800) - 900;
+    var posz = (Math.random() * 1800) - 900;
+    mesh.position.set(posx, 30, posz);
+    mygame.scene.add(mesh);
+
+    mygame.targets.mesh = mesh;
+    mygame.targets.edges[0] = posx - 30;
+    mygame.targets.edges[1] = posx + 30;
+    mygame.targets.edges[2] = posz - 30;
+    mygame.targets.edges[3] = posz + 30;
+  } else {
+    mygame.targets.mesh.rotation.y += 0.02;
+  }
+  mygame.renderer.render(mygame.scene, mygame.camera);
+};

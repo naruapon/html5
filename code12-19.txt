@@ -1,0 +1,13 @@
+mygame.loop = function() {
+  mygame.control();
+  mygame.process();
+  mygame.detect();
+  mygame.draw();
+
+  requestAnimationFrame(function() {
+    mygame.loop();
+  });
+};
+window.addEventListener("load", function() {
+  mygame.initiate();
+});

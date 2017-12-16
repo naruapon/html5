@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <script>
+    var name1, name2;
+    function initiate() {
+      name1 = document.getElementById("firstname");
+      name2 = document.getElementById("lastname");
+      name1.addEventListener("input", validation);
+      name2.addEventListener("input", validation);
+      validation();
+    }
+    function validation() {
+      if (name1.value == "" && name2.value == "") {
+        name1.setCustomValidity("Insert at least one name");
+        name1.style.background = "#FFDDDD";
+        name2.style.background = "#FFDDDD";
+      } else {
+        name1.setCustomValidity("");
+        name1.style.background = "#FFFFFF";
+        name2.style.background = "#FFFFFF";
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <form name="registration" method="get" action="process.php">
+      <p><label>First Name: <input type="text" name="firstname" id="firstname"></label></p>
+      <p><label>Last Name: <input type="text" name="lastname" id="lastname"></label></p>
+      <p><input type="submit" value="Sign Up"></p>
+    </form>
+  </section>
+</body>
+</html>

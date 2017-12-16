@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cross Document Messaging</title>
+  <link rel="stylesheet" href="messaging.css">
+  <script src="messaging.js"></script>
+</head>
+<body>
+  <section id="formbox">
+    <form name="form">
+      <label for="name">Your name: </label>
+      <input type="text" name="name" id="name" required>
+      <button type="button" id="button">Send</button>
+    </form>
+  </section>
+  <section id="databox">
+    <iframe id="iframe" src="iframe.html" width="500" height="350"></iframe>
+  </section>
+</body>
+</html>

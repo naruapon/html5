@@ -1,0 +1,18 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var myfiles = document.getElementById("myfiles");
+  myfiles.addEventListener("change", process);
+}
+function process(event) {
+  var files = event.target.files;
+  var myfile = files[0];
+  var reader = new FileReader();
+  reader.addEventListener("load", show);
+  reader.readAsText(myfile);
+}
+function show(event) {
+  var result = event.target.result;
+  databox.innerHTML = result;
+}
+window.addEventListener("load", initiate);

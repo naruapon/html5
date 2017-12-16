@@ -1,0 +1,12 @@
+function play(mybuffer) {
+  var sourceNode = context.createBufferSource();
+  sourceNode.buffer = mybuffer;
+
+  var filterNode = context.createBiquadFilter();
+  filterNode.type = "highpass";
+  filterNode.frequency.value = 1000;
+
+  sourceNode.connect(filterNode);
+  filterNode.connect(context.destination);
+  sourceNode.start(0);
+}

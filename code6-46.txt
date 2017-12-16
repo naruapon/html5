@@ -1,0 +1,5 @@
+var counter = 0;
+while(counter < 100) {
+  counter++;
+}
+alert("The value is: " + counter);  // "The value is: 100"

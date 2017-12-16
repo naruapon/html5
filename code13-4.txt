@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pointer Lock API</title>
+  <script>
+    var canvas;
+    function initiate() {
+      var element = document.getElementById("canvas");
+      canvas = element.getContext("2d");
+      element.addEventListener("click", lockmouse);
+      element.addEventListener("mousemove", draw);
+    }
+    function draw(event) {
+      canvas.clearRect(0, 0, 500, 400);
+      var posx = event.clientX;
+      var posy = event.clientY;
+
+      canvas.beginPath();
+      canvas.moveTo(posx, posy - 20);
+      canvas.lineTo(posx, posy + 20);
+      canvas.moveTo(posx - 20, posy);
+      canvas.lineTo(posx + 20, posy);
+      canvas.moveTo(posx + 20, posy);
+      canvas.arc(posx, posy, 20, 0, Math.PI * 2);
+      canvas.stroke();
+    }
+    function lockmouse(event) {
+      var element = event.target;
+      if (!document.pointerLockElement) {
+        element.requestPointerLock();
+      } else {
+        document.exitPointerLock();
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <canvas id="canvas" width="500" height="400"></canvas>
+  </section>
+</body>
+</html>

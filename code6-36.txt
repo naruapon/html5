@@ -1,0 +1,4 @@
+var myvariable = 9;
+if (myvariable < 10) {
+  alert("The number is less than 10");
+}

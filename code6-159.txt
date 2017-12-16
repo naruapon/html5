@@ -1,0 +1,17 @@
+<script>
+  function addClicks() {
+    var list = document.querySelectorAll("section > p");
+    for (var f = 0; f < list.length; f++) {
+      var element = list[f];
+      element.addEventListener("click", function(event) {
+          var ourvalue = 125;
+          changecolor(event, ourvalue);
+      });
+    }
+  }
+  function changecolor(event, ourvalue) {
+    var element = event.target;
+    element.innerHTML = "Value " + ourvalue;
+  }
+  window.addEventListener("load", addClicks);
+</script>

@@ -1,0 +1,4 @@
+<aside>
+  <p>Quote from article one</p>
+  <p>Quote from article two</p>
+</aside>

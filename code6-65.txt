@@ -1,0 +1,4 @@
+var myobject = {
+  name: "John",
+  age: 30
+};

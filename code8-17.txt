@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Video Subtitles</title>
+</head>
+<body>
+  <section>
+    <video width="720" height="400" controls>
+      <source src="trailer.mp4">
+      <source src="trailer.ogg">
+      <track src="subtitles.vtt" srclang="en" default>
+    </video>
+  </section>
+</body>
+</html>

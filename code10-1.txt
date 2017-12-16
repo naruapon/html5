@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Full Screen</title>
+  <script>
+    var video;
+    function initiate() {
+      video = document.getElementById("media");
+      video.addEventListener("click", gofullscreen);
+    }
+    function gofullscreen() {
+      if (!document.webkitFullscreenElement) {
+        video.webkitRequestFullscreen();
+        video.play();
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="media" width="720" height="400" poster="poster.jpg">
+      <source src="trailer.mp4">
+      <source src="trailer.ogg">
+    </video>
+  </section>
+</body>
+</html>

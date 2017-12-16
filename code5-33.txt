@@ -1,0 +1,18 @@
+<script>
+  var visible = false;
+  function initiate() {
+    var elem = document.getElementById("menu-img");
+    elem.addEventListener("click", showMenu);
+  }
+  function showMenu() {
+    var elem = document.getElementById("mainmenu");
+    if (!visible) {
+      elem.style.display = "flex";
+      visible = true;
+    } else {
+      elem.style.display = "none";
+      visible = false;
+    }
+  }
+  window.addEventListener("load", initiate);
+</script>

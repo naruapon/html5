@@ -1,0 +1,5 @@
+var myvalue = function(value) {
+  value = value * 2;
+  return value;
+}(35);
+alert("The value is " + myvalue);  // "The value is 70"

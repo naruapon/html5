@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Working with Tracks</title>
+  <script>
+    function initiate() {
+      var video = document.getElementById("media");
+      var track1 = video.textTracks[0];
+      var mytrack = document.getElementById("mytrack");
+      var track2 = mytrack.track;
+      console.log(track1);
+      console.log(track2);
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="media" width="720" height="400" controls>
+      <source src="trailer.mp4">
+      <source src="trailer.ogg">
+      <track id="mytrack" label="English Subtitles" src="subtitles.vtt" srclang="en" default>
+    </video>
+  </section>
+</body>
+</html>

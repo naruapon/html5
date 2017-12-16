@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <main>
+    <section>
+      <p class="mytext">Sentence 1</p>
+      <p class="mytext">Sentence 2</p>
+      <p>Sentence 3</p>
+      <p>Sentence 4</p>
+    </section>
+  </main>
+</body>
+</html>

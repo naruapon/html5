@@ -1,0 +1,34 @@
+mygame.control = function(event) {
+  var action;
+  while (mygame.input.length) {
+    action = mygame.input.shift();
+    switch (action.type) {
+      case "keydown":
+        switch(action.key){
+          case "ArrowUp":
+            mygame.car.speedUP = true;
+            break;
+          case "ArrowLeft":
+            mygame.car.left = true;
+            break;
+          case "ArrowRight":
+            mygame.car.right = true;
+            break;
+        }
+        break;
+      case "keyup":
+        switch(action.key){
+          case "ArrowUp":
+            mygame.car.speedUP = false;
+            break;
+          case "ArrowLeft":
+            mygame.car.left = false;
+            break;
+          case "ArrowRight":
+            mygame.car.right = false;
+            break;
+        }
+        break;
+    }
+  }
+};

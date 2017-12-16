@@ -1,0 +1,3 @@
+var text = "Hello World";
+var newText = text.replace("World", "Planet");
+alert(newText);  // "Hello Planet"

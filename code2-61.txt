@@ -1,0 +1,4 @@
+<form name="myform" method="get" action="process.php">
+  <p><label>Text: <textarea name="mytext" cols="50" rows="6"></textarea></label></p>
+  <p><input type="submit" value="Send"></p>
+</form>

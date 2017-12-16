@@ -1,0 +1,6 @@
+function showerror(event) {
+  alert("Error: " + event.code + " " + event.message);
+}
+function start(event) {
+  db = event.target.result;
+}

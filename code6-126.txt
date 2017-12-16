@@ -1,0 +1,4 @@
+var today = new Date();
+alert(today);  // "Thu Jan 05 2017 14:37:28 GMT-0500 (EST)"
+today.setDate(today.getDate() + 15);
+alert(today);  // "Fri Jan 20 2017 14:37:28 GMT-0500 (EST)"

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stream API</title>
+  <style>
+    section {
+      float: left;
+    }
+  </style>
+  <script>
+    function initiate() {
+      var promise = navigator.mediaDevices.getUserMedia({video: true});
+      promise.then(success);
+      promise.catch(showerror);
+
+      function success(stream) {
+        var video = document.getElementById("video");
+        video.srcObject = stream;
+        video.play();
+
+        var databox = document.getElementById("databox");
+        var videoTracks = stream.getVideoTracks();
+        var track = videoTracks[0];
+        var data = "";
+        data += "<br> Enabled: " + track.enabled;
+        data += "<br> Type: " + track.kind;
+        data += "<br> Device: " + track.label;
+        databox.innerHTML = data;
+      }
+      function showerror(error) {
+        console.log("Error: " + error.name);
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <video id="video"></video>
+  </section>
+  <section id="databox"></section>
+</body>
+</html>

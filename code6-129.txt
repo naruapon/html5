@@ -1,0 +1,5 @@
+var today = new Date(2017, 0, 5);
+var future = new Date(2017, 0, 20);
+var interval = future - today;
+var days = interval / (24 * 60 * 60 * 1000);
+alert(days + " days");  // "15 days"

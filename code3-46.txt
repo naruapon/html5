@@ -1,0 +1,7 @@
+header {
+  margin: 30px;
+  padding: 15px;
+}
+#title {
+  font: bold 36px Verdana, sans-serif;
+}

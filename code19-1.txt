@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>History API</title>
+  <script>
+    function goback() {
+      window.history.back();
+    }
+  </script>
+</head>
+<body>
+  <section>
+    <button type="button" onclick="goback()">Go to the previous page</button>
+  </section>
+</body>
+</html>

@@ -1,0 +1,2 @@
+var mytext = 'They don\'t make it anymore';
+alert(mytext);

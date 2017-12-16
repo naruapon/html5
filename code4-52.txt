@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5 document">
+  <meta name="keywords" content="HTML, CSS, Javascript">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <header id="logoheader">
+    <div>
+      <h1>This is a title</h1>
+    </div>
+  </header>
+  <nav id="mainmenu">
+    <div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div>
+      <section id="mainarticles">
+        <article>
+          <h1>Title First Post</h1>
+          <time datetime="2016-12-23" pubdate>
+            <div class="daynumber">23</div>
+            <div class="dayname">Friday</div>
+          </time>
+          <p>This is the text of my first post</p>
+          <figure>
+            <img src="myimage.jpg">
+          </figure>
+        </article>
+        <article>
+          <h1>Title Second Post</h1>
+          <time datetime="2016-12-7" pubdate>
+            <div class="daynumber">7</div>
+            <div class="dayname">Wednesday</div>
+          </time>
+          <p>This is the text of my second post</p>
+          <figure>
+            <img src="myimage.jpg">
+          </figure>
+        </article>
+      </section>
+      <aside id="asideinfo">
+        <h1>Personal Info</h1>
+        <p>Quote from post one</p>
+        <p>Quote from post two</p>
+      </aside>
+    </div>
+  </main>
+  <footer id="logofooter">
+    <div>
+      <section class="footersection">
+        <h1>Website</h1>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="photos.html">Photos</a></p>
+        <p><a href="videos.html">Videos</a></p>
+      </section>
+      <section class="footersection">
+        <h1>Help</h1>
+        <p><a href="contact.html">Contact</a></p>
+      </section>
+      <section class="footersection">
+        <address>Toronto, Canada</address>
+        <small>Copyright &copy; 2016</small>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,7 @@
+var globalVariable = 5;
+function myfunction(){
+  var localVariable = "The value is ";
+  alert(localVariable + globalVariable);  // "The value is 5"
+}
+myfunction();
+alert(localVariable);

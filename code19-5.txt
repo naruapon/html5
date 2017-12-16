@@ -1,0 +1,18 @@
+function initiate() {
+  databox = document.getElementById("databox");
+  url = document.getElementById("url");
+  url.addEventListener("click", changepage);
+  window.addEventListener("popstate", newurl);
+  history.replaceState(1, null);
+}
+function changepage() {
+  showpage(2);
+  history.pushState(2, null, "page2.html");
+}
+function newurl(event) {
+  showpage(event.state);
+}
+function showpage(current) {
+  databox.innerHTML = "The url is page " + current;
+}
+window.addEventListener("load", initiate);

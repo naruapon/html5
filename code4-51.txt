@@ -1,0 +1,25 @@
+#parentbox {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  border: 1px solid;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+#parentbox > div {
+  height: 50px;
+  margin: 5px;
+  background-color: #CCCCCC;
+}
+#box-1 {
+  flex: 1 1 100px;
+}
+#box-2 {
+  flex: 1 1 100px;
+}
+#box-3 {
+  flex: 1 1 100px;
+}
+#box-4 {
+  flex: 1 1 400px;
+}

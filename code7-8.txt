@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+  <style>
+    input:valid{
+      background: #EEEEFF;
+    }
+    input:invalid{
+      background: #FFEEEE;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <form name="myform" method="get" action="process.php">
+      <input type="email" name="myemail" required>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+</body>
+</html>

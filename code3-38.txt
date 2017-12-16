@@ -1,0 +1,7 @@
+#title {
+  font: bold 36px MyNewFont, Verdana, sans-serif;
+}
+@font-face {
+  font-family: "MyNewFont";
+  src: url("font.ttf");
+}

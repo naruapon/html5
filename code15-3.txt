@@ -1,0 +1,11 @@
+var databox, db;
+function initiate() {
+  databox = document.getElementById("databox");
+  var button = document.getElementById("save");
+  button.addEventListener("click", addobject);
+
+  var request = indexedDB.open("mydatabase");
+  request.addEventListener("error", showerror);
+  request.addEventListener("success", start);
+  request.addEventListener("upgradeneeded", createdb);
+}

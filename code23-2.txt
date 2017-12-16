@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebSocket</title>
+  <link rel="stylesheet" href="websocket.css">
+  <script src="websocket.js"></script>
+</head>
+<body>
+  <section id="formbox">
+    <form name="form">
+      <label for="command">Command: </label><br>
+      <input type="text" name="command" id="command"><br>
+      <button type="button" id="button">Send</button>
+    </form>
+  </section>
+  <section id="databox"></section>
+</body>
+</html>

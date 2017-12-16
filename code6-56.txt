@@ -1,0 +1,5 @@
+var counter = 100;
+function myfunction(value) {
+  alert(value);
+}
+myfunction(counter);

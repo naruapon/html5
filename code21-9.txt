@@ -1,0 +1,46 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var myfiles = document.getElementById("myfiles");
+  myfiles.addEventListener("change", upload);
+}
+function upload(event) {
+  var files = event.target.files;
+  var myfile = files[0];
+
+  var data = new FormData();
+  data.append("file", myfile);
+
+  var url = "process.php";
+  var request = new XMLHttpRequest();
+  request.addEventListener("loadstart", start);
+  request.addEventListener("load", show);
+  var xmlupload = request.upload;
+  xmlupload.addEventListener("progress", status);
+  request.open("POST", url, true);
+  request.send(data);
+}
+function start() {
+  var progress = document.createElement("progress");
+  progress.value = 0;
+  progress.max = 100;
+  progress.innerHTML = "0%";
+  databox.appendChild(progress);
+}
+function status(event) {
+  if (event.lengthComputable) {
+    var per = parseInt(event.loaded / event.total * 100);
+    var progressbar = databox.querySelector("progress");
+    progressbar.value = per;
+    progressbar.innerHTML = per + '%';
+  } else {
+    console.log("The total size can't be calculated");
+  }
+}
+function show(event) {
+  var data = event.target;
+  if (data.status == 200) {
+    databox.innerHTML = "Done";
+  }
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,6 @@
+var myvariable = 21;
+if (myvariable < 10) {
+  alert("The number is less than 10");
+} else {
+  alert("The number is 10 or larger");
+}

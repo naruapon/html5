@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ajax Level 2</title>
+  <link rel="stylesheet" href="ajax.css">
+  <script src="ajax.js"></script>
+</head>
+<body>
+  <section id="databox">
+    <p>Drop Files Here</p>
+  </section>
+</body>
+</html>

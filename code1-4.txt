@@ -1,0 +1,4 @@
+<?php
+  $name = $_GET['myname'];
+  print('Your name is: '.$name);
+?>

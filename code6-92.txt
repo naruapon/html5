@@ -1,0 +1,3 @@
+var text = "Hello World";
+var message = text.toUpperCase();
+alert(message);  // "HELLO WORLD"

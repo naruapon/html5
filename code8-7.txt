@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audio Player</title>
+</head>
+<body>
+  <section>
+    <audio id="media" controls>
+      <source src="beach.mp3">
+      <source src="beach.ogg">
+    </audio>
+  </section>
+</body>
+</html>

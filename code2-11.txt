@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5 document">
+  <meta name="keywords" content="HTML, CSS, Javascript">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <header>
+    This is a title
+  </header>
+  <nav>
+    Home | Photos | Videos | Contact
+  </nav>
+</body>
+</html>

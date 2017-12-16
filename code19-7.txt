@@ -1,0 +1,26 @@
+function initiate() {
+  for (var f = 1; f < 5; f++) {
+    url = document.getElementById("url" + f);
+    url.addEventListener("click", function(x){
+      return function() {
+        changepage(x);
+      };
+    }(f));
+  }
+  window.addEventListener("popstate", newurl);
+  history.replaceState(1, null, "page1.html");
+}
+function changepage(page) {
+  showpage(page);
+  history.pushState(page, null, "page" + page + ".html");
+}
+function newurl(event) {
+  showpage(event.state);
+}
+function showpage(current) {
+  if (current != null) {
+    var image = document.getElementById("image");
+    image.src = "monster" + current + ".gif";
+  }
+}
+window.addEventListener("load", initiate);

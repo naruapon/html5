@@ -1,0 +1,3 @@
+function level() {
+  mmedia.volume = volume.value;
+}

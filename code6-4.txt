@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Javascript</title>
+  <script>
+    alert('Welcome!');
+  </script>
+</head>
+<body>
+  <section>
+    <p>Hello</p>
+  </section>
+</body>
+</html>

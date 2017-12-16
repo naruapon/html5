@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <meta name="description" content="This is an HTML5 document">
+  <meta name="keywords" content="HTML, CSS, Javascript">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <section>
+    <img src="myimage.jpg">
+    <p>The World Wide Web's markup language has always been HTML. HTML was primarily designed as a language for semantically describing scientific documents, although its general design and adaptations over the years have enabled it to be used to describe a number of other types of documents.</p>
+    <div class="clearfloat"></div>
+  </section>
+  <footer>
+    <p>Published by W3C</p>
+  </footer>
+</body>
+</html>

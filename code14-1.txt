@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Storage API</title>
+  <link rel="stylesheet" href="storage.css">
+  <script src="storage.js"></script>
+</head>
+<body>
+  <section id="formbox">
+    <form name="form">
+      <p><label>Keyword: <input type="text" name="keyword" id="keyword"></label></p>
+      <p><label>Value: <textarea name="text" id="text"></textarea></label></p>
+      <p><button type="button" id="save">Save</button></p>
+    </form>
+  </section>
+  <section id="databox">
+    <p>No Information available</p>
+  </section>
+</body>
+</html>

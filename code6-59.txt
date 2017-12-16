@@ -1,0 +1,12 @@
+var counter = 100;
+var items = 5;
+function myfunction(value1, value2) {
+  var total = value1 + value2;
+  if (total > 100) {
+    return total;
+  } else {
+    return 0;
+  }
+}
+var result = myfunction(counter, items);
+alert(result);

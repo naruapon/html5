@@ -1,0 +1,9 @@
+function sound() {
+  if (mute.value == "Mute") {
+    mmedia.muted = true;
+    mute.value = "Sound";
+  } else {
+    mmedia.muted = false;
+    mute.value = "Mute";
+  }
+}

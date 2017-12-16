@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pointer Lock API</title>
+  <script>
+    var canvas, posx, posy;
+    function initiate() {
+      var element = document.getElementById("canvas");
+      canvas = element.getContext("2d");
+      element.addEventListener("click", lockmouse);
+      startmessage();
+    }
+    function draw(event) {
+      canvas.clearRect(0, 0, 500, 400);
+
+      var test1, test2;
+      test1 = posx + event.movementX;
+      test2 = posy + event.movementY;
+      if(test1 > 0 && test1 < 500){
+        posx = test1;
+      }
+      if(test2 > 0 && test2 < 400){
+        posy = test2;
+      }
+      canvas.beginPath();
+      canvas.moveTo(posx, posy - 20);
+      canvas.lineTo(posx, posy + 20);
+      canvas.moveTo(posx - 20, posy);
+      canvas.lineTo(posx + 20, posy);
+      canvas.moveTo(posx + 20, posy);
+      canvas.arc(posx, posy, 20, 0, Math.PI * 2);
+      canvas.stroke();
+    }
+    function lockmouse(event) {
+      var element = event.target;
+      if (!document.pointerLockElement) {
+        element.requestPointerLock();
+        posx = event.clientX;
+        posy = event.clientY;
+        element.addEventListener("mousemove", draw);
+      } else {
+        document.exitPointerLock();
+        element.removeEventListener("mousemove", draw);
+        startmessage();
+      }
+    }
+    function startmessage() {
+      canvas.clearRect(0, 0, 500, 400);
+      canvas.font = "bold 36px verdana, sans-serif";
+      canvas.fillText("Click to Play", 120, 180);
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <canvas id="canvas" width="500" height="400"></canvas>
+  </section>
+</body>
+</html>

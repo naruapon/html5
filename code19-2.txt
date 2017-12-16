@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>History API</title>
+  <link rel="stylesheet" href="history.css">
+  <script src="history.js"></script>
+</head>
+<body>
+  <section id="maincontent">
+    <p>This content is never refreshed</p>
+    <p><span id="url">page 2</span></p>
+  </section>
+  <aside id="databox"></aside>
+</body>
+</html>

@@ -1,0 +1,10 @@
+var today = new Date(2017, 0, 20, 10, 35);
+var future = new Date(2017, 0, 20, 12, 35);
+today.setHours(0, 0, 0);
+future.setHours(0, 0, 0);
+
+if (future.getTime() == today.getTime()) {
+  alert("Equal dates");
+} else {
+  alert("Different dates");
+}

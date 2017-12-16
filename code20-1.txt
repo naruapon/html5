@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Visibility API</title>
+  <script>
+    function initiate() {
+      document.addEventListener("visibilitychange", showstate);
+    }
+    function showstate() {
+      var element = document.getElementById("application");
+      element.innerHTML += "<br>" + document.visibilityState;
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section id="application">
+    <p>Move to another tab or minimize this window to change the visibility state</p>
+  </section>
+</body>
+</html>

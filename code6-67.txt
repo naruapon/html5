@@ -1,0 +1,6 @@
+var propertyName = "name";
+var myobject = {
+  name: "John",
+  age: 30
+};
+alert(myobject[propertyName]);  // "John"

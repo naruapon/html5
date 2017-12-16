@@ -1,0 +1,42 @@
+var databox, db;
+function initiate() {
+  databox = document.getElementById("databox");
+  var button = document.getElementById("find");
+  button.addEventListener("click", findobjects);
+
+  var request = indexedDB.open("mydatabase");
+  request.addEventListener("error", showerror);
+  request.addEventListener("success", start);
+  request.addEventListener("upgradeneeded", createdb);
+}
+function showerror(event) {
+  alert("Error: " + event.code + " " + event.message);
+}
+function start(event) {
+  db = event.target.result;
+}
+function createdb(event) {
+  var database = event.target.result;
+  var mystore = database.createObjectStore("movies", {keyPath: "id"});
+  mystore.createIndex("SearchYear", "date", {unique: false});
+}
+function findobjects() {
+  databox.innerHTML = "";
+  var find = document.getElementById("year").value;
+
+  var mytransaction = db.transaction(["movies"]);
+  var mystore = mytransaction.objectStore("movies");
+  var myindex = mystore.index("SearchYear");
+  var myrange = IDBKeyRange.only(find);
+
+  var newcursor = myindex.openCursor(myrange);
+  newcursor.addEventListener("success", showlist);
+}
+function showlist(event) {
+  var cursor = event.target.result;
+  if (cursor) {
+    databox.innerHTML += "<div>" + cursor.value.id + " - " + cursor.value.name + " - " + cursor.value.date + "</div>";
+    cursor.continue();
+  }
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,12 @@
+<main>
+  <section>
+    <div class="books">Book: IT, Stephen King</div>
+    <div class="books">Book: Carrie, Stephen King</div>
+    <div class="books">Book: The Shining, Stephen King</div>
+    <div class="books">Book: Misery, Stephen King</div>
+  </section>
+  <aside>
+    Quote from article one
+    Quote from article two
+  </aside>
+</main>

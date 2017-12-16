@@ -1,0 +1,9 @@
+function show() {
+  databox.innerHTML = "";
+  var mytransaction = db.transaction(["movies"]);
+  var mystore = mytransaction.objectStore("movies");
+  var myindex = mystore.index("SearchYear");
+
+  var newcursor = myindex.openCursor(null, "prev");
+  newcursor.addEventListener("success", showlist);
+}

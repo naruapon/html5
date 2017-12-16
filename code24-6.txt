@@ -1,0 +1,5 @@
+function setdescription(sessionDescription) {
+  user.setLocalDescription(sessionDescription, function() {
+    sendmsg(sessionDescription);
+  });
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Javascript</title>
+  <script src="mycode.js"></script>
+</head>
+<body>
+  <section>
+    <p>Hello</p>
+  </section>
+</body>
+</html>

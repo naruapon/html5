@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>This text is the title of the document</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+  <header>
+    <span id="title">Cascading Style Sheets</span>
+  </header>
+  <section>
+    <p id="description">Cascading Style Sheets (CSS) are a stylesheet language used to describe the presentation of a document written in HTML. CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</p>
+  </section>
+  <footer>
+    <a href="http://www.jdgauchat.com">www.jdgauchat.com</a>
+  </footer>
+</body>
+</html>

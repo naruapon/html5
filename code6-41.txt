@@ -1,0 +1,4 @@
+var name = "John";
+if (name) {
+   alert(name + " is allowed");
+}

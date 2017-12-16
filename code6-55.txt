@@ -1,0 +1,5 @@
+function myfunction(value) {
+  alert(value);
+}
+myfunction(5);
+myfunction(25);

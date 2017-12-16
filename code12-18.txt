@@ -1,0 +1,11 @@
+mygame.detect = function() {
+  var posx = mygame.car.mesh.position.x;
+  var posz = mygame.car.mesh.position.z;
+  if (posx < -980 || posx > 980 || posz < -980 || posz > 980) {
+    mygame.car.speed = -7;
+  }
+  if (posx > mygame.targets.edges[0] && posx < mygame.targets.edges[1] && posz > mygame.targets.edges[2] && posz < mygame.targets.edges[3]) {
+    mygame.scene.remove(mygame.targets.mesh);
+    mygame.targets.mesh = "";
+  }
+};

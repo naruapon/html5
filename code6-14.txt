@@ -1,0 +1,3 @@
+var mynumber = 0;
+mynumber++;
+alert(mynumber);  // 1

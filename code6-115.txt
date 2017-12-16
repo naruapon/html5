@@ -1,0 +1,4 @@
+var list = [12, 5, 80, 34];
+var removed = list.splice(1, 2);
+alert("Values remaining: " + list);  // 12,34
+alert("Values removed: " + removed);  // 5,80

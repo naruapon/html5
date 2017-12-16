@@ -1,0 +1,4 @@
+var name = "John Doe";
+var encodedName = encodeURIComponent(name);
+var myURL = "http://www.example.com/contact.html?name=" + encodedName;
+alert(myURL);

@@ -1,0 +1,36 @@
+var source, drop;
+function initiate() {
+  source = document.getElementById("image");
+  source.addEventListener("dragstart", dragged);
+  source.addEventListener("dragend", ending);
+
+  drop = document.getElementById("dropbox");
+  drop.addEventListener("dragenter", entering);
+  drop.addEventListener("dragleave", leaving);
+  drop.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("drop", dropped);
+}
+function entering(event) {
+  event.preventDefault();
+  drop.style.background = "rgba(0, 150, 0, .2)";
+}
+function leaving(event) {
+  event.preventDefault();
+  drop.style.background = "#FFFFFF";
+}
+function ending(event) {
+  elem = event.target;
+  elem.style.visibility = "hidden";
+}
+function dragged(event) {
+  var code = '<img src="' + source.src + '">';
+  event.dataTransfer.setData("Text", code);
+}
+function dropped(event) {
+  event.preventDefault();
+  drop.style.background = "#FFFFFF";
+  drop.innerHTML = event.dataTransfer.getData("Text");
+}
+window.addEventListener("load", initiate);

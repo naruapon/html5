@@ -1,0 +1,7 @@
+var myvariable = 5;
+function myfunction(){
+  var myvariable = "This is a local variable";
+  alert(myvariable);
+}
+myfunction();
+alert(myvariable);

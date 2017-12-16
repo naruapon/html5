@@ -1,0 +1,21 @@
+var drop;
+function initiate() {
+  drop = document.getElementById("dropbox");
+  drop.addEventListener("dragenter", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
+  drop.addEventListener("drop", dropped);
+}
+function dropped(event) {
+  event.preventDefault();
+  var files = event.dataTransfer.files;
+  var list = "";
+  for (var f = 0; f < files.length; f++) {
+    list += "File: " + files[f].name + " " + files[f].size + "<br>";
+  }
+  drop.innerHTML = list;
+}
+window.addEventListener("load", initiate);

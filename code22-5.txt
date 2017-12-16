@@ -1,0 +1,9 @@
+function initiate() {
+  window.addEventListener("message", receiver);
+}
+function receiver(event) {
+  var databox = document.getElementById("databox");
+  databox.innerHTML = "Message from: " + event.origin + "<br>";
+  databox.innerHTML += "message: " + event.data;
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Javascript</title>
+  <script>
+    var seconds = 0;
+    var timer = setInterval(doit, 1000);
+    function doit() {
+      seconds++;
+    }
+    function cancel() {
+      clearInterval(timer);
+      alert("Total " + seconds + " seconds");
+    }
+  </script>
+</head>
+<body>
+  <section>
+    <h1>Website</h1>
+    <button type="button" onclick="cancel()">Press Button</button>
+  </section>
+</body>
+</html>

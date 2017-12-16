@@ -1,0 +1,22 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var button = document.getElementById("button");
+  button.addEventListener("click", read);
+}
+function read() {
+  var url = "myimage.jpg";
+  var request = new XMLHttpRequest();
+  request.responseType = "blob";
+  request.addEventListener("load", show);
+  request.open("GET", url, true);
+  request.send(null);
+}
+function show(event) {
+  var data = event.target;
+  if (data.status == 200) {
+    var image = URL.createObjectURL(data.response);
+    databox.innerHTML = '<img src="' + image + '">';
+  }
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,8 @@
+<form name="myform" method="get" action="process.php">
+  <p><label>Name: <input type="text" name="myname" maxlength="15"></label></p>
+  <p><label><input type="radio" name="myage" value="15" checked> 15 Years</label></p>
+  <p><label><input type="radio" name="myage" value="30"> 30 Years</label></p>
+  <p><label><input type="radio" name="myage" value="45"> 45 Years</label></p>
+  <p><label><input type="radio" name="myage" value="60"> 60 Years</label></p>
+  <p><input type="submit" value="Send"></p>
+</form>

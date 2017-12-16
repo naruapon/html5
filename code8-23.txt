@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Working with Tracks</title>
+  <style>
+    #player, #info{
+      float: left;
+    }
+  </style>
+  <script>
+    function initiate() {
+      var info = document.getElementById("info");
+      var mytrack = document.getElementById("mytrack");
+      var obj = mytrack.track;
+
+      var list = "";
+      list += "<br>Kind: " + obj.kind;
+      list += "<br>Label: " + obj.label;
+      list += "<br>Language: " + obj.language;
+      info.innerHTML = list;
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section id="player">
+    <video id="media" width="720" height="400" controls>
+      <source src="trailer.mp4">
+      <source src="trailer.ogg">
+      <track id="mytrack" label="English Subtitles" src="subtitles.vtt" srclang="en" default>
+    </video>
+  </section>
+  <aside id="info"></aside>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+</head>
+<body>
+  <section>
+    <form name="myform" method="get" action="process.php">
+      <p><input type="text" name="myname"></p>
+      <p><input type="text" name="myage"></p>
+      <p><input type="submit"></p>
+    </form>
+  </section>
+</body>
+</html>

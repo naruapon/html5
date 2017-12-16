@@ -1,0 +1,14 @@
+#mainmenu li {
+  display: inline-block;
+  height: 35px;
+  padding: 15px 10px 0px 10px;
+  margin-right: 5px;
+}
+#mainmenu li:hover {
+  background-color: #6FACC6;
+}
+#mainmenu a {
+  font: bold 18px Arial, sans-serif;
+  color: #333333;
+  text-decoration: none;
+}

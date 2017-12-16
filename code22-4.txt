@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>iframe Window</title>
+  <script src="iframe.js"></script>
+</head>
+<body>
+  <section>
+    <div><b>Message from main window:</b></div>
+    <div id="databox"></div>
+  </section>
+</body>
+</html>

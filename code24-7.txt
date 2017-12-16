@@ -1,0 +1,4 @@
+function sendmsg(message) {
+  var msg = JSON.stringify(message);
+  socket.send(msg);
+}

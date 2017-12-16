@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pointer Lock API</title>
+  <script>
+    function initiate() {
+      var element = document.getElementById("control");
+      element.addEventListener("click", lockmouse);
+      document.addEventListener("pointerlockchange", checkmouse);
+    }
+    function lockmouse(event) {
+      var element = event.target;
+      element.requestPointerLock();
+    }
+    function checkmouse() {
+      var element = document.getElementById("control");
+      if (document.pointerLockElement) {
+        console.log("Mouse Locked");
+      } else {
+        console.log("Mouse Unlocked");
+      }
+    }
+    window.addEventListener("load", initiate);
+  </script>
+</head>
+<body>
+  <section>
+    <p id="control">Click here to lock the mouse</p>
+  </section>
+</body>
+</html>

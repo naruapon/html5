@@ -1,0 +1,6 @@
+var myvariable = "name";
+var myobject = {
+  name: "John",
+  'my age': 30
+};
+alert(myobject['my age']);  // 30

@@ -1,0 +1,4 @@
+<?php
+  print('Your name is: '.$_POST['name'].'<br>');
+  print('Your last name is: '.$_POST['lastname']);
+?>

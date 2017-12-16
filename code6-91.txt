@@ -1,0 +1,14 @@
+var text = "Hello World";
+var message = "";
+var previous = "";
+
+for (var f = 0; f < text.length; f++) {
+  if (message != "") {
+    previous = text[f - 1];
+    if (previous != " " && text[f] != " ") {
+      message += ".";
+    }
+  }
+  message += text[f];
+}
+alert(message);  // "H.e.l.l.o W.o.r.l.d"

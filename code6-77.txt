@@ -1,0 +1,15 @@
+var constructor = function() {
+  var name = "John";
+  var age = 30;
+  var obj = {
+    showname: function() {
+        alert(name);
+    },
+    changename: function(newname) {
+      name = newname;
+    }
+  };
+  return obj;
+};
+var employee = constructor();
+employee.showname();  // "John"

@@ -1,0 +1,12 @@
+var user, socket;
+function initiate() {
+  var callbutton = document.getElementById("callbutton");
+  callbutton.addEventListener("click", makecall);
+
+  socket = new WebSocket("ws://YOUR_IP_ADDRESS:12345/ws/demo.php");
+  socket.addEventListener("message", received);
+
+  var promise = navigator.mediaDevices.getUserMedia({video: true});
+  promise.then(setwebcam);
+  promise.catch(showerror);
+}

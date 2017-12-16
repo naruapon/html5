@@ -1,0 +1,21 @@
+header {
+  margin: 30px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid;
+  animation: myanimation 1s ease-in-out 0s infinite normal none;
+}
+@keyframes myanimation {
+  0% {
+    background: #FFFFFF;
+  }
+  50% {
+    background: #FF0000;
+  }
+  100% {
+    background: #FFFFFF;
+  }
+}
+#title {
+  font: bold 36px Verdana, sans-serif;
+}

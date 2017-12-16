@@ -1,0 +1,2 @@
+var list = new Array(2);
+alert(list[0] + " - " + list[1]);  // undefined - undefined

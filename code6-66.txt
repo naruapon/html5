@@ -1,0 +1,7 @@
+var myobject = {
+  name: "John",
+  age: 30
+};
+var message = "My name is " + myobject.name + "\r\n";
+message += "I'm " + myobject["age"] + " years old";
+alert(message);

@@ -1,0 +1,9 @@
+#title {
+  font: bold 36px Verdana, sans-serif;
+}
+#description {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}

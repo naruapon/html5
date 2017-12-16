@@ -1,0 +1,13 @@
+function initiate() {
+  window.addEventListener("message", receiver);
+}
+function receiver(event) {
+  var databox = document.getElementById("databox");
+  if (event.origin == "http://www.domain1.com") {
+    databox.innerHTML = "Valid message: " + event.data;
+    event.source.postMessage("Message received", event.origin);
+  }else{
+    databox.innerHTML = "Invalid origin";
+  }
+}
+window.addEventListener("load", initiate);

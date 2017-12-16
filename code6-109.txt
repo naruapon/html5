@@ -1,0 +1,3 @@
+var list = [12, 5, 80, 34, 5];
+var index = list.indexOf(5);
+alert("The value " + list[index] + " is at index " + index);

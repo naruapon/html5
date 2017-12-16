@@ -1,0 +1,58 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  databox.addEventListener("dragenter", function(event) {
+    event.preventDefault();
+  });
+  databox.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
+  databox.addEventListener("drop", dropped);
+}
+function dropped(event) {
+  event.preventDefault();
+  var files = event.dataTransfer.files;
+  if (files.length) {
+    var list = "";
+    for (var f = 0; f < files.length; f++) {
+      var file = files[f];
+      list += "<div>File: " + file.name;
+      list += '<br><span><progress value="0" max="100">0%</progress></span>';
+      list += "</div>";
+    }
+    databox.innerHTML = list;
+
+    var count = 0;
+    var upload = function() {
+      var myfile = files[count];
+      var data = new FormData();
+      data.append("file", myfile);
+      var url = "process.php";
+      var request = new XMLHttpRequest();
+      var xmlupload = request.upload;
+
+      xmlupload.addEventListener("progress", function(event) {
+        if(event.lengthComputable){
+          var child = count + 1;
+          var per = parseInt(event.loaded / event.total * 100);
+          var progressbar = databox.querySelector("div:nth-child(" + child + ") > span > progress");
+          progressbar.value = per;
+          progressbar.innerHTML = per + "%";
+        }
+      });
+      request.addEventListener("load", function() {
+        var child = count + 1;
+        var elem = databox.querySelector("div:nth-child(" + child + ") > span");
+        elem.innerHTML = "Done!";
+        count++;
+        if (count < files.length) {
+          upload();
+        }
+      });
+      request.open("POST", url, true);
+      request.send(data);
+    };
+    upload();
+  }
+}
+window.addEventListener("load", initiate);

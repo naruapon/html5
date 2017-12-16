@@ -1,0 +1,3 @@
+var myarray = [64, 32];
+myarray[1] = myarray[1] + 10;
+alert("The current value is " + myarray[1]); // "The current value is 42"

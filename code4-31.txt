@@ -1,0 +1,11 @@
+<ul id="menulist">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="photos.html">Photos</a>
+    <ul>
+      <li><a href="family.html">Family</a></li>
+      <li><a href="vacations.html">Vacations</a></li>
+    </ul>
+  </li>
+  <li><a href="videos.html">Videos</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>

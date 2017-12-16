@@ -1,0 +1,14 @@
+function setremotestream(event) {
+  var video = document.getElementById("receivermedia");
+  video.srcObject = event.stream;
+  video.play();
+}
+function setice(event){
+  if (event.candidate) {
+    var message = {
+      type: "candidate",
+      candidate: event.candidate,
+    };
+    sendmsg(message);
+  }
+}

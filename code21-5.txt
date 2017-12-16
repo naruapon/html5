@@ -1,0 +1,39 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var button = document.getElementById("button");
+  button.addEventListener("click", read);
+}
+function read() {
+  var url = "trailer.ogg";
+  var request = new XMLHttpRequest();
+  request.addEventListener("loadstart", start);
+  request.addEventListener("progress", status);
+  request.addEventListener("load", show);
+  request.open("GET", url, true);
+  request.send(null);
+}
+function start() {
+  var progress = document.createElement("progress");
+  progress.value = 0;
+  progress.max = 100;
+  progress.innerHTML = "0%";
+  databox.appendChild(progress);
+}
+function status(event) {
+  if (event.lengthComputable) {
+    var per = Math.ceil(event.loaded / event.total * 100);
+    var progressbar = databox.querySelector("progress");
+    progressbar.value = per;
+    progressbar.innerHTML = per + '%';
+  } else {
+    console.log("The total size can't be calculated");
+  }
+}
+function show(event) {
+  var data = event.target;
+  if (data.status == 200) {
+    databox.innerHTML = "Done";
+  }
+}
+window.addEventListener("load", initiate);

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Forms</title>
+</head>
+<body>
+  <section>
+    <form name="myform" method="get" action="process.php">
+      <p><label>Name: <input type="text" name="myname" maxlength="15"></label></p>
+      <p><label>Age: <input type="number" name="myage"></label></p>
+      <p><label>Email: <input type="email" name="myemail"></label></p>
+      <p><label>Phone: <input type="tel" name="myphone"></label></p>
+      <p><label>Website: <input type="url" name="mywebsite"></label></p>
+      <p><input type="submit" value="Send"></p>
+    </form>
+  </section>
+</body>
+</html>

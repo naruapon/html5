@@ -1,0 +1,17 @@
+var constructor = function(initialname) {
+  var obj = {
+    name: initialname,
+    age: 30,
+    showname: function() {
+      alert(this.name);
+    },
+    changename: function(newname) {
+      this.name = newname;
+    }
+  };
+  return obj;
+};
+var employee1 = constructor("John");
+var employee2 = constructor("Robert");
+var employee3 = constructor("Arthur");
+alert(employee1.name + ", " + employee2.name + ", " + employee3.name);

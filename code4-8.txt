@@ -1,0 +1,35 @@
+#parentbox {
+  width: 600px;
+  border: 1px solid;
+}
+#box-1 {
+  float: left;
+  width: 140px;
+  height: 50px;
+  margin: 5px;
+  background-color: #AAAAAA;
+}
+#box-2 {
+  float: left;
+  width: 140px;
+  height: 50px;
+  margin: 5px;
+  background-color: #CCCCCC;
+}
+#box-3 {
+  float: left;
+  width: 140px;
+  height: 50px;
+  margin: 5px;
+  background-color: #AAAAAA;
+}
+#box-4 {
+  float: left;
+  width: 140px;
+  height: 50px;
+  margin: 5px;
+  background-color: #CCCCCC;
+}
+.clearfloat {
+  clear: both;
+}

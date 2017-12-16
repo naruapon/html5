@@ -1,0 +1,9 @@
+var list = [12, 5, 80, 34];
+var newList = list.filter(function(value) {
+  if (value <= 50) {
+    return true;
+  } else {
+    return false;
+  }
+});
+alert(newList);  // 12, 5, 34

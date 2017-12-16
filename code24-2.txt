@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebRTC API</title>
+  <style>
+    #caller, #receiver {
+      float: left;
+      margin: 5px;
+      padding: 5px;
+      border: 1px solid #000000;
+    }
+  </style>
+  <script src="webrtc.js"></script>
+</head>
+<body>
+  <section id="caller">
+    <video id="callermedia" width="150" height="150"></video>
+    <br><input type="button" id="callbutton" value="Call">
+  </section>
+  <section id="receiver">
+    <video id="receivermedia" width="500" height="500"></video>
+  </section>
+</body>
+</html>

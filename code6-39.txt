@@ -1,0 +1,5 @@
+var smart = true;
+var age = 19;
+if (age < 21 && smart) {
+   alert("John is allowed");
+}

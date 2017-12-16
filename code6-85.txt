@@ -1,0 +1,3 @@
+var value = new Number("5");
+var total = value * 35;
+alert(total);  // 175

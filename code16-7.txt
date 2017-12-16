@@ -1,0 +1,32 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var myfiles = document.getElementById("myfiles");
+  myfiles.addEventListener("change", process);
+}
+function process(event) {
+  databox.innerHTML = "";
+  var files = event.target.files;
+  var myfile = files[0];
+
+  var reader = new FileReader();
+  reader.addEventListener("loadstart", start);
+  reader.addEventListener("progress", status);
+  reader.addEventListener("loadend", function() {
+    show(myfile);
+  });
+  reader.readAsBinaryString(myfile);
+}
+function start(event) {
+  databox.innerHTML = '<progress value="0" max="100">0%</progress>';
+}
+function status(event) {
+  var per = parseInt(event.loaded / event.total * 100);
+  databox.innerHTML = '<progress value="' + per + '" max="100">' + per + '%</progress>';
+}
+function show(myfile) {
+  databox.innerHTML = "Name: " + myfile.name + "<br>";
+  databox.innerHTML += "Type: " + myfile.type + "<br>";
+  databox.innerHTML += "Size: " + myfile.size + " bytes<br>";
+}
+window.addEventListener("load", initiate);

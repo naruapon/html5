@@ -1,0 +1,26 @@
+var databox;
+function initiate() {
+  databox = document.getElementById("databox");
+  var myfiles = document.getElementById("myfiles");
+  myfiles.addEventListener("change", process);
+}
+function process(event) {
+  databox.innerHTML = "";
+  var files = event.target.files;
+  var myfile = files[0];
+  var reader = new FileReader();
+  reader.addEventListener("load", function(event) {
+    show(event, myfile)
+  });
+  var blob = myfile.slice(0,1000);
+  reader.readAsBinaryString(blob);
+}
+function show(event, myfile){
+  var result = event.target.result;
+  databox.innerHTML = "Name: " + myfile.name + "<br>";
+  databox.innerHTML += "Type: " + myfile.type + "<br>";
+  databox.innerHTML += "Size: " + myfile.size + " bytes<br>";
+  databox.innerHTML += "Blob size: " + result.length + " bytes<br>";
+  databox.innerHTML += "Blob: " + result;
+}
+window.addEventListener("load", initiate);

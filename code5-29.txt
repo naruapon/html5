@@ -1,0 +1,13 @@
+<nav id="menuicon">
+  <img src="iconmenu.png" width="35" height="28" id="menu-img">
+</nav>
+<nav id="mainmenu">
+  <div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="videos.html">Videos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>

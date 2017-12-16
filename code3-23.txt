@@ -1,0 +1,12 @@
+p[name~="my"] {
+  font-size: 20px;
+}
+p[name^="my"] {
+  font-size: 20px;
+}
+p[name$="my"] {
+  font-size: 20px;
+}
+p[name*="my"] {
+  font-size: 20px;
+}

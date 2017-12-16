@@ -1,0 +1,11 @@
+var list = [2, 4, 6, 8];
+
+var total = 0;
+for (var f = 0; f < 4; f++) {
+  var number = list[f];
+  if (number == 6) {
+    continue;
+  }
+  total += number;
+}
+alert("The total is: " + total);  // "The total is: 14"

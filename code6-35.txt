@@ -1,0 +1,3 @@
+var myarray = [2, 45, 31];
+myarray = []
+alert(myarray[1]);  // undefined

@@ -1,0 +1,9 @@
+var myfunction = function(value) {
+  value = value * 2;
+  return value;
+};
+var total = 2;
+for (var f = 0; f < 10; f++) {
+  total = myfunction(total);
+}
+alert("The total is " + total);  // "The total is 2048"

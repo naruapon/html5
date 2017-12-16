@@ -1,0 +1,6 @@
+var myvalue = "Hello";
+if (isNaN(myvalue)) {
+  alert(myvalue + " is not a number");
+} else {
+  alert(myvalue + " is a number");
+}
